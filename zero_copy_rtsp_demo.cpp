@@ -2,9 +2,9 @@
 
 ※ How to Compile
 
-g++ -std=c++17 -g -O2 -Wall -I/usr/include/libcamera 
-`pkg-config --cflags gstreamer-1.0 gstreamer-rtsp-server-1.0 gstreamer-app-1.0` 
--o zero_copy_rtsp_demo zero_copy_rtsp_demo.cpp -lcamera -lcamera-base 
+g++ -std=c++17 -g -O2 -Wall -I/usr/include/libcamera \
+`pkg-config --cflags gstreamer-1.0 gstreamer-rtsp-server-1.0 gstreamer-app-1.0` \
+-o zero_copy_rtsp_demo zero_copy_rtsp_demo.cpp -lcamera -lcamera-base \
 `pkg-config --libs gstreamer-1.0 gstreamer-rtsp-server-1.0 gstreamer-app-1.0` -lpthread
 
 
