@@ -1,0 +1,16 @@
+{
+    "video": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "pixel_format": "BGR888",
+        "buffer_count": 8
+    },
+    "rtsp": {
+        "port": 8554,
+        "mount_point": "/stream",
+        "bitrate": 2000000,
+        "encoder": "v4l2h264enc",
+        "pipeline": "appsrc name=mysrc ! queue ! v4l2convert ! video/x-raw,format=NV12 ! queue ! v4l2h264enc ! video/x-h264,level=(string)4 ! rtph264pay name=pay0 pt=96"
+    }
+}
